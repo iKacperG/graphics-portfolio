@@ -1,0 +1,9 @@
+export const colors = {
+  WHITE: '#FFFFFF',
+  BLACK: '#000000',
+  BLUE_GRAY: '#D9E4EC',
+  MISTY_BLUE: '#B7CFDC',
+  BLUE_GROTTO: '#6AABD2',
+  MISTY_DARK: '#385E72',
+  MISTY_FONT: '#050A30',
+};
