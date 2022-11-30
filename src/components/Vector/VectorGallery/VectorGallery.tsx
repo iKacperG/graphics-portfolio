@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageList, ImageListItem } from '@mui/material';
 import { itemData } from './fakeApi';
 
-export default function PixelGallery(){
+export default function VectorGallery(){
   function srcset(image: string, size: number, rows = 1, cols = 1) {
     return {
       src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -14,7 +14,7 @@ export default function PixelGallery(){
 
   return(
     <ImageList
-      sx={{ width: 500, height: 496 }}
+      sx={{ width: '100%', height: 496 }}
       variant="quilted"
       cols={4}
       rowHeight={121}
