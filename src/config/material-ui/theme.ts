@@ -1,17 +1,18 @@
 import { createTheme } from '@mui/material';
-import SairaCondensed from './fonts/SairaCondensed/SairaCondensed-ExtraLight.woff2';
-import GloriaHallelujah from './fonts/GloriaHallelujah/GloriaHallelujah-Regular.woff2';
-import SyneMono from './fonts/SyneMono/SyneMono-Regular.woff2';
+import LatoBlack from './fonts/Lato/Lato-Black.woff2';
+import OpenSans from './fonts/OpenSans/AnyConv.com__OpenSans-VariableFont_wdth,wght.woff2';
+
 import { colors } from './colors';
 
 const theme = createTheme({
   palette: {
     primary: {
-      light: colors.MISTY_BLUE,
-      main: colors.MISTY_DARK,
+      light: colors.MISTY_DARK,
+      main: colors.MISTY_FONT,
     },
     text: {
-      primary: colors.MISTY_FONT,
+      primary: colors.BLUE_GRAY,
+      secondary: colors.BLUE_GROTTO,
     },
     background: {
       paper: colors.BLUE_GRAY,
@@ -19,12 +20,12 @@ const theme = createTheme({
   },
   typography: {
     h1: {
-      fontFamily: 'GloriaHallelujah',
+      fontFamily: 'LatoBlack',
       fontSize: '2.2rem',
       lineHeight: '3.2rem',
     },
     h2: {
-      fontFamily: 'SyneMono',
+      fontFamily: 'LatoBlack',
       fontSize: '1.6rem',
       lineHeight: '2rem',
     },
@@ -47,7 +48,7 @@ const theme = createTheme({
       lineHeight: '2.2rem',
     },
     body1: {
-      fontFamily: 'SairaCondensed',
+      fontFamily: 'OpenSans',
       fontStyle: 'normal',
       fontWeight: '500',
       fontSize: '1.4rem',
@@ -60,7 +61,7 @@ const theme = createTheme({
       lineHeight: '1.6rem',
     },
     button: {
-      fontFamily: 'SairaCondensed',
+      fontFamily: 'OpenSans',
       fontStyle: 'normal',
       fontWeight: '600',
       fontSize: '1.4rem',
@@ -71,26 +72,19 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: `
         @font-face {
-          font-family: 'SairaCondensedExtraLight';
+          font-family: 'LatoBlack';
           font-style: normal;
           font-display: swap;
           font-weight: normal;
-          src: local('SairaCondensedExtraLight'), local('SairaCondensedExtraLight'), url(${SairaCondensed}) format('woff2');
+          src: local('LatoBlack'), local('LatoBlack'), url(${LatoBlack}) format('woff2');
         }   
         @font-face {
-          font-family: 'GloriaHallelujah';
+          font-family: 'OpenSans';
           font-style: normal;
           font-display: swap;
           font-weight: normal;
-          src: local('GloriaHallelujah'), local('GloriaHallelujah'), url(${GloriaHallelujah}) format('woff2');
+          src: local('OpenSans'), local('OpenSans'), url(${OpenSans}) format('woff2');
         }    
-        @font-face {
-          font-family: 'SyneMono';
-          font-style: normal;
-          font-display: swap;
-          font-weight: normal;
-          src: local('SyneMono'), local('SyneMono'), url(${SyneMono}) format('woff2');
-        }
       `,
     },
     MuiButton: {

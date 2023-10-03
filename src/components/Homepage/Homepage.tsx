@@ -1,24 +1,25 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import PreviewGallery from '../PreviewGallery/PreviewGallery';
-import LinkButton from '../commons/Buttons/LinkButton/LinkButton';
+import GymPreview from '../GymPreview/GymPreview';
+import PhysiotherapyPreview from '../PhysiotherapyPreview/PhysiotherapyPreview';
 
 export default function Homepage(){
   return(
     <>
-      <Grid container justifyContent="center" bgcolor="background.paper">
-        <Grid item xs={12} md={10} lg={9} xl={7} height="83vh" display="flex">
+      <Grid container justifyContent="center" style={{
+        background: 'linear-gradient(45deg, rgba(39,38,67,1) 0%, rgba(39,38,67,1) 50%, rgba(217,228,236,1) 50%, rgba(217,228,236,1) 100%)',
+      }}
+      >
+        <Grid item xs={12} md={12} lg={12} xl={12} height="83vh" display="flex">
           <Grid container>
-            <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
-              <PreviewGallery />
+            <Grid item xs={6} display="flex" justifyContent="center" alignItems="center">
+              <GymPreview />
             </Grid>
-            <Grid item xs={12} mt={5} display="flex" gap={3} justifyContent="center">
-              <LinkButton to="/about">Check bio</LinkButton>
-              <LinkButton to="/gallery">Check my other projects</LinkButton>
+            <Grid item xs={6} display="flex" justifyContent="center" alignItems="center">
+              <PhysiotherapyPreview />
             </Grid>
           </Grid>
         </Grid>
-
       </Grid>
     </>
   )

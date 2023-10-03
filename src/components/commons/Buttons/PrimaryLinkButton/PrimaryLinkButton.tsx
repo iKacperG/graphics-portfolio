@@ -1,17 +1,17 @@
 import React, { ReactNode } from 'react';
-import StyledLink from './styled/StyledLink';
 import { Typography } from '@mui/material';
+import { PrimaryLink } from './styled/StyledLink';
 
 interface LinkButtonProps {
   to: string,
   children: ReactNode,
 }
 
-export default function LinkButton({ to, children }: LinkButtonProps){
+export default function PrimaryLinkButton({ to, children }: LinkButtonProps){
   return(
-    <StyledLink to={to}>
+    <PrimaryLink to={to}>
       <Typography variant="body1">{ children }
       </Typography>
-    </StyledLink>
+    </PrimaryLink>
   )
 }
